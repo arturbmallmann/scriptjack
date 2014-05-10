@@ -1,0 +1,13 @@
+JACK MIDI <-> ALSA sequencer MIDI bridge, version 7 (b169fb6b8e9e11ce1488d1964649aabedbb89ddf) built on Wed Dec 31 21:00:00 1969
+Copyright 2006,2007 Dmitry S. Baikov
+Copyright 2007,2008,2009,2011 Nedko Arnaudov
+
+Bridge starting...
+Using JACK server 'default'
+Hardware ports will not be exported.
+Bridge started
+Press ctrl-c to stop the bridge
+port created: Midi Through [14] (capture): Midi Through Port-0
+port created: Midi Through [14] (playback): Midi Through Port-0
+port created: VMPK Output [130] (capture): VMPK Output
+port created: VMPK Input [131] (playback): VMPK Input

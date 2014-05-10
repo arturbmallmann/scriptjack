@@ -1,0 +1,38 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.3.9" name="definicoesqjack">
+ <output-sockets>
+  <socket exclusive="off" client="jamin" type="jack-audio" name="Output Socket 3">
+   <plug>out_L</plug>
+   <plug>out_R</plug>
+  </socket>
+  <socket exclusive="off" client="jamin" type="jack-audio" name="Output Socket 1">
+   <plug>out_L</plug>
+   <plug>out_R</plug>
+  </socket>
+  <socket exclusive="off" client="moc" type="jack-audio" name="Output Socket 2">
+   <plug>output0</plug>
+   <plug>output1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket exclusive="off" client="system" type="jack-audio" name="Input Socket 3">
+   <plug>playback_3</plug>
+   <plug>playback_4</plug>
+  </socket>
+  <socket exclusive="off" client="system" type="jack-audio" name="Input Socket 1">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
+  <socket exclusive="off" client="jamin" type="jack-audio" name="Input Socket 2">
+   <plug>in_L</plug>
+   <plug>in_R</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable output="Output Socket 1" input="Input Socket 1" type="jack-audio"/>
+  <cable output="Output Socket 2" input="Input Socket 2" type="jack-audio"/>
+  <cable output="Output Socket 3" input="Input Socket 3" type="jack-audio"/>
+ </cables>
+</patchbay>
+

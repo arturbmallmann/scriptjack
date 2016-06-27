@@ -9,5 +9,24 @@ Bridge started
 Press ctrl-c to stop the bridge
 port created: Midi Through [14] (capture): Midi Through Port-0
 port created: Midi Through [14] (playback): Midi Through Port-0
-port created: VMPK Output [130] (capture): VMPK Output
-port created: VMPK Input [131] (playback): VMPK Input
+JackPosixSemaphore::TimedWait err = Interrupted system call
+Bridge stopping...
+Cannot read socket fd = 6 err = Success
+CheckRes error
+JackSocketClientChannel read fail
+[33mWARNING: [0mJACK server shutdown notification received.
+Cannot write socket fd = 4 err = Broken pipe
+CheckRes error
+CheckRes error
+Could not write request type = 7
+port deleted: Midi Through [14] (capture): Midi Through Port-0
+Cannot write socket fd = 4 err = Broken pipe
+CheckRes error
+CheckRes error
+Could not write request type = 2
+port deleted: Midi Through [14] (playback): Midi Through Port-0
+Cannot write socket fd = 4 err = Broken pipe
+CheckRes error
+CheckRes error
+Could not write request type = 2
+Bridge stopped

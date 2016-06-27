@@ -1,9 +1,16 @@
 <!DOCTYPE patchbay>
 <patchbay version="0.3.9" name="definicoesqjack">
  <output-sockets>
-  <socket exclusive="off" client="MPlayer \[[0-9]+\]" type="jack-audio" name="mplayer">
+  <socket exclusive="on" client="MPlayer \[[0-9]+\]" type="jack-audio" name="mplayer">
    <plug>out_0</plug>
    <plug>out_1</plug>
+  </socket>
+  <socket exclusive="off" client="bristol" type="jack-audio" name="Bristol">
+   <plug>out_left</plug>
+   <plug>out_right</plug>
+  </socket>
+  <socket exclusive="off" client="a2j" type="jack-midi" name="vmpk">
+   <plug>VMPK Output \[129\] \(capture\): VMPK Output</plug>
   </socket>
   <socket exclusive="off" client="alsa-jack\.rawjackP\.[0-9]+\.0" type="jack-audio" name="alsa">
    <plug>out_000</plug>
@@ -35,14 +42,19 @@
    <plug>in_L</plug>
    <plug>in_R</plug>
   </socket>
+  <socket exclusive="off" client="bristol" type="jack-midi" name="BristolMidiIn">
+   <plug>midi_in</plug>
+  </socket>
  </input-sockets>
  <slots/>
  <cables>
+  <cable output="mplayer" input="jamin in" type="jack-audio"/>
+  <cable output="Bristol" input="jamin in" type="jack-audio"/>
+  <cable output="vmpk" input="BristolMidiIn" type="jack-midi"/>
   <cable output="alsa" input="jamin in" type="jack-audio"/>
   <cable output="jamin2" input="Input Socket 3" type="jack-audio"/>
   <cable output="jamin1" input="Input Socket 1" type="jack-audio"/>
   <cable output="moc" input="jamin in" type="jack-audio"/>
-  <cable output="mplayer" input="jamin in" type="jack-audio"/>
  </cables>
 </patchbay>
 
